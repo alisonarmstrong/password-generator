@@ -1,6 +1,7 @@
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
+document.querySelector("#generate").addEventListener("click", writePassword);
 
 // Arrays
 
@@ -17,7 +18,7 @@ var confirmUpperCase;
 
 
 // User choices for password specifics, via prompts
-
+function generatePassword () {
   var confirmLength = prompt("How many characters will the password be? Enter a number between 8 and 128");
     alert(`Your password will have ${confirmLength} characters`);
   
@@ -25,7 +26,7 @@ var confirmUpperCase;
   var confirmUpperCase = confirm("Click OK to confirm to include uppercase characters");
   var confirmSpecialCharacter = confirm("Click OK to include special characters");
   var confirmNumber = confirm("Click OK to include numbers");    
-
+}
 
 // Generate Password
 
@@ -53,7 +54,7 @@ for (var i = 0; i < confirmLength; i++) {
   randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
   console.log(randomPassword)
 }
-return randomPassword;
+
 
 // Write password
 function writePassword() {

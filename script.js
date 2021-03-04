@@ -26,8 +26,8 @@ function generatePassword () {
   var confirmUpperCase = confirm("Click OK to confirm to include uppercase characters");
   var confirmSpecialCharacter = confirm("Click OK to include special characters");
   var confirmNumber = confirm("Click OK to include numbers");    
-}
 
+}
 // Generate Password
 
 var passwordCharacters = []
